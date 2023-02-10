@@ -1,0 +1,154 @@
+<div class="container">
+  <div style="margin-left: 80%; margin-bottom: 20px;">
+    <button (click)="btnSave()" class="btnClose" >Save</button>
+    <button (click)="btnClose()" class="btnClose" >Close</button>
+  </div>
+
+  <mat-card>
+      <div class="p">
+        <table style="width: 100%;">
+          <tr>
+              <td style="width: 50%;">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Job  Number*</mat-label>
+                      <input matInput [(ngModel)]="objectData.jobNumber">
+                  </mat-form-field>
+                  
+              </td>
+              <td style="width: 50%;">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Task Number*</mat-label>
+                      <input matInput [(ngModel)]="objectData.taskNumber">
+                  </mat-form-field>
+                  
+              </td>
+          </tr>
+      </table>
+      <table style="width: 100%;">
+        <tr>
+          <td style="width: 35%;">
+           <mat-form-field appearance="fill">
+               <mat-select placeholder="Job Type*" [(ngModel)]="objectData.jobType">
+                 <mat-option *ngFor="let food of foods" [value]="food.value">
+                   {{ food.viewValue }}
+                 </mat-option>
+               </mat-select>
+             </mat-form-field>
+          </td>
+          <td style="width: 35%;">
+           <mat-form-field appearance="fill">
+               <mat-select placeholder="Job Type Check List*" [(ngModel)]="objectData.jobTypeCheckList">
+                 <mat-option *ngFor="let food of foods" [value]="food.value">
+                   {{ food.viewValue }}
+                 </mat-option>
+               </mat-select>
+             </mat-form-field>
+          </td>
+      
+          <td style="width: 35%;">
+           <mat-form-field appearance="fill">
+             <mat-label>Work Order Date</mat-label>
+             <input matInput [matDatepicker]="picker3" [value]="date.value" [(ngModel)]="objectData.workOrderDate">
+             <mat-hint>วว/ดด/ปปปป</mat-hint>
+             <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+             <mat-datepicker #picker3 startView="multi-year"></mat-datepicker>
+           </mat-form-field>
+          </td>
+          
+       </tr>
+       
+      </table>
+      
+      <table style="width: 100%;">
+          <tr>
+              <td style="width: 50%;">
+                <mat-form-field appearance="fill">
+                    <mat-label>Customer*</mat-label>
+                    <input matInput [(ngModel)]="objectData.customer">
+                </mat-form-field>
+                
+            </td>
+            <td style="width: 50%;">
+              <mat-form-field appearance="fill">
+                  <mat-label>Project Name*</mat-label>
+                  <input matInput [(ngModel)]="objectData.projectName">
+              </mat-form-field>
+          </td>
+          </tr>
+      </table>
+      <table style="width: 100%;">
+          <tr>
+            <td style="width: 100%;">
+              <mat-form-field appearance="fill">
+                  <mat-label>Address*</mat-label>
+                  <input matInput [(ngModel)]="objectData.address">
+              </mat-form-field>
+          </td>
+          </tr>
+      </table>
+      
+      <table style="width: 100%;">
+        <tr> 
+          <td style="width: 50%;">
+              <mat-form-field appearance="fill">
+                <mat-label>Latitude*</mat-label>
+                <input matInput [(ngModel)]="objectData.lat">
+            </mat-form-field>
+          </td>
+          <td style="width: 50%;">
+            <mat-form-field appearance="fill">
+              <mat-label>Longtitude*</mat-label>
+              <input matInput [(ngModel)]="objectData.lng">
+          </mat-form-field>
+        </td>
+        </tr>
+      </table>
+      
+      <table style="width: 100%;">
+          <tr>
+            <td style="width: 35%;">
+              <mat-form-field appearance="fill">
+                <mat-label>Contact Date</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="objectData.contactData" [value]="dateContact.value" >
+                <mat-hint>วว/ดด/ปปปป</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker startView="multi-year"></mat-datepicker>
+              </mat-form-field>
+             </td>
+      
+             <td style="width: 35%;">
+                <mat-form-field appearance="fill">
+                    <mat-label>Contact Name*</mat-label>
+                    <input matInput [(ngModel)]="objectData.contactName">
+                </mat-form-field>
+             </td>
+             <td style="width: 35%;">
+              <mat-form-field appearance="fill">
+                  <mat-label>Phone No*</mat-label>
+                  <input matInput [(ngModel)]="objectData.phoneNo">
+              </mat-form-field>
+           </td>
+          </tr>
+      </table>
+      
+      <table style="width: 100%;">
+            <tr>
+              <td style="width: 50%;">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Sale Name*</mat-label>
+                    <input matInput [(ngModel)]="objectData.saleName">
+                </mat-form-field>
+              </td>
+              <td style="width: 50%;">
+                <mat-form-field appearance="fill">
+                  <mat-label>Phone No*</mat-label>
+                  <input matInput [(ngModel)]="objectData.phoneNo2">
+              </mat-form-field>
+            </td>
+            </tr>
+      </table>
+      </div>
+  </mat-card>
+
+</div>
+
