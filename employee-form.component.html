@@ -1,0 +1,864 @@
+<hr style="margin: 20px;">
+<div class="container">
+    <button class="button">New</button>
+    <button class="button" style="margin-left: 10px;">Save</button>
+    <button class="button" style="margin-left: 80%;">Close</button>
+
+</div>
+<hr style="margin: 20px;">
+
+
+<div class="card" style="margin: 20px;">
+    <div class="row d-flex justify-content-end mt-3 " style="margin-left: 50%;">
+        <div class="col-sm-3">
+            <img src="https://files.vogue.co.th/uploads/lisa.PNG" width="100" style="border-radius: 80px;" height="100"
+                alt="">
+        </div>
+    </div>
+    <div class="row" >
+            <div class="col-md-3" style="text-align:center;">HN</div>
+            <div class="col-md-3">
+                <mat-form-field>
+                    <input matInput [(ngModel)]="hn">
+                </mat-form-field>
+            </div>
+  
+            <div class="col-sm-3">
+                <mat-form-field appearance="fill">
+                    <mat-label>ประเภททุน</mat-label>
+                    <mat-select matNativeControl required>
+                        <mat-option *ngFor="let object of objectData2" value="">{{object.fundingName}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+      
+        
+    </div>
+    <div class="row">
+        <div class="col-md-3" style="text-align:center;">Patient Name</div>
+        <div class="col-md-3">
+            <mat-form-field>
+                <input matInput placeholder="Thai Name">
+            </mat-form-field>
+        </div>
+        <div class="col-md-3">
+            <mat-form-field>
+                <input matInput placeholder="English Name">
+            </mat-form-field>
+        </div>
+    </div>
+
+</div>
+
+<div style="margin: 20px;">
+    <hr style="color: rgb(232, 9, 9);">
+    <mat-tab-group>
+        <mat-tab label="Demographic Detail">
+            <div class="card">
+                <div class="row" style="margin: 20px;">
+                    <div class="col">
+                        Patient Series
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        Preferred Facility
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">
+                        Citizen ID
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        Other Alt No
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">Govenment Officer No.</div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">Expiry Date</div>
+                    <div class="col-sm-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Contact Date</mat-label>
+                            <input matInput [matDatepicker]="picker" [value]="dateContact.value">
+                            <mat-hint>วว/ดด/ปปปป</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker startView="multi-year"></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">
+                        Driving Licence No.
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">Expiry Date</div>
+                    <div class="col-sm-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Contact Date</mat-label>
+                            <input matInput [matDatepicker]="picker" [value]="dateContact.value">
+                            <mat-hint>วว/ดด/ปปปป</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker startView="multi-year"></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <!-- <div class="row" style="margin: 20px;">
+                    <div class="col">Passport No./Expatriate</div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">Expiry Date</div>
+                    <div class="col-sm-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Contact Date</mat-label>
+                            <input matInput [matDatepicker]="picker" [value]="dateContact.value" >
+                            <mat-hint>วว/ดด/ปปปป</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker startView="multi-year"></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div> -->
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">Prefix*</div>
+                    <div class="col-sm-3">First Name*</div>
+                    <div class="col-sm-3">Last Name*</div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option *ngFor="let object of prefiexEng ">{{object.prefixName}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">
+                        คำนำหน้า
+                    </div>
+                    <div class="col-sm-3">
+                        ชื่อ
+                    </div>
+                    <div class="col-sm-3">
+                        นามสกุล
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option value="">------select-------</option>
+                                <option value="volvo" *ngFor="let object of prefiexTh">{{object.prefixName}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col">
+                        Gender
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Gender</mat-label>
+                            <select matNativeControl required>
+                                <option value="">------select-------</option>
+                                <option value="volvo" *ngFor="let oject of gender">{{oject.gender}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        Age Birth Date & Time
+                    </div>
+                    <div class="col">
+                        <mat-checkbox></mat-checkbox>
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col">
+                        <input type="time" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col">
+                        Blood Group
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Blood</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab" *ngFor="let object of blood">{{object.blood}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        RH(D) Factor
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>RH(D) Factor</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab" *ngFor="let object of rh">{{object.rh}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        Know Allergy
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Allergy</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab" *ngFor="let object of allergy">{{object.allergy}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col">
+                        Marital Status
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Marital Status</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="volvo" *ngFor="let object of status">{{object.status}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        Birth Place
+                    </div>
+                    <div class="col">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Birth Place</mat-label>
+                            <input type="text" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row" style="margin: 20px;">
+                    <div class="col">Patient Category</div>
+                    <div class="col" style="margin-right: 60%;">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm">
+                        Patient Category
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1">Citizen</mat-radio-button>
+                            <mat-radio-button value="2">Non-Citizen</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="col-sm-3">Status&nbsp;</div>
+                    <div class="col-sm-3">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1">Legal</mat-radio-button>
+                            <mat-radio-button value="2">Illegal</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col">Nationality</div>
+                    <div class="col" style="margin-right: 60%;">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nationality</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="" *ngFor="let object of nationality">{{object.nationality}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">Ethicity</div>
+                    <div class="col-sm-3 ">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Ethicity</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab" *ngFor="let object of ethicity">{{object.ethicity}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">Religion</div>
+                    <div class="col-sm-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Religion</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="saab" *ngFor="let object of religion">{{object.religion}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 20px;">
+                    <div class="col">Language</div>
+                    <div class="col" style="margin-right: 60%;">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cars</mat-label>
+                            <select matNativeControl required>
+                                <option value="volvo">----Select----</option>
+                                <option value="" *ngFor="let object of language">{{object.language}}</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row" style="margin: 20px;">
+                    <div class="col-sm-3">
+                        Spouse Name
+                    </div>
+                    <div class="col">
+                        <div class="div">
+                            <mat-form-field>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        Father Name
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row" style="margin: 20px;">
+                    <div class="col">Mother Name</div>
+                    <div class="col" style="margin-right: 60%;">
+                        <mat-form-field>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="Contact Address">
+            <div class="card" id="card">
+                <h2 class="title">Contact Address</h2>
+                <div class="" style="margin: 20px">
+                    <table style="width: 100%; margin: 10px;">
+                        <tr style="width: 25%">
+                            <td>Address</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                            <td>Moo</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                            <td>Soi</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr style="width: 25%">
+                            <td>Road</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                            <td>Sub-District</td>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Sub-District</mat-label>
+                                    <select matNativeControl required>
+                                        <option value="saab">------Select-----</option>
+                                        <option value="mercedes" *ngFor="let sub_district of sub_districts">
+                                            {{sub_district.name_th}}</option>
+
+                                    </select>
+                                </mat-form-field>
+                            </td>
+                            <td>District</td>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Sub-District</mat-label>
+                                    <select matNativeControl required>
+                                        <option value="saab">-------Select-------</option>
+                                        <option value="" *ngFor="let district of districts">{{district.name_th}}
+                                        </option>
+                                    </select>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr style="width: 25%;">
+                            <td>Province</td>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Province</mat-label>
+                                    <select matNativeControl required>
+                                        <option value="">-------Select---------</option>
+                                        <option value="saab" *ngFor="let provinceData of provinces">
+                                            {{provinceData.name_th}}</option>
+                                    </select>
+                                </mat-form-field>
+                            </td>
+                            <td>PostCode</td>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>PostCode</mat-label>
+                                    <select matNativeControl required>
+                                        <option value="saab">-----Select-----</option>
+                                        <option value="mercedes" *ngFor="let postCode of sub_districts ">
+                                            {{postCode.zip_code}}</option>
+                                    </select>
+                                </mat-form-field>
+                            </td>
+                            <td>Country</td>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Country</mat-label>
+                                    <select matNativeControl required>
+                                        <option value="saab">------Select------</option>
+                                        <option value="mercedes" *ngFor="let country of countries">{{country.name}}
+                                        </option>
+
+                                    </select>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <h2 class="title">Contact Mode</h2>
+                <div class="" style="margin: 15px">
+
+                    <table style="width: 90%">
+                        <tr>
+                            <td>Primary Resi No.</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                            <td>Mobile No.</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Province</td>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Province</mat-label>
+                                    <select matNativeControl required>
+                                        <option value="saab">-----Select-----</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 51%; margin-left: 175px;">
+                        <tr>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label></mat-label>
+                                    <select matNativeControl required>
+                                        <option value="saab">-----Select-----</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label></mat-label>
+                                        <select matNativeControl required>
+                                            <option value="saab">-----Select-----</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </mat-form-field>
+                                </div>
+
+                            </td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card" id="card">
+                <h2 class="title">Additional Details</h2>
+                <div class="" style="margin: 20px;">
+                    <table style="width: 60%;">
+                        <tr>
+                            <td>Nearby Place</td>
+                            <td>
+                                <mat-form-field>
+                                    <input matInput>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Related Contacts">
+            <mat-tab-group animationDuration="1500ms" mat-stretch-tabs="false">
+                <mat-tab label="Contact Person">
+                    <div class="card mt-3">
+                        <div style="margin: 20px" class="btnAction">
+                            <button class="btn btn-success">New</button>
+                            <button class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                        </div>
+
+                        <div style="margin: 15px">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">ชื่อ-สกุล</th>
+                                        <th scope="col">Relationship</th>
+                                        <th scope="col">Mobile No.</th>
+                                        <th scope="col">Contact Type</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of contacts">
+                                        <th scope="row"><mat-checkbox></mat-checkbox>{{data.No}}</th>
+                                        <td>{{data.full_name}}</td>
+                                        <td>{{data.Realationship}}</td>
+                                        <td>{{data.Mobile_No}}</td>
+                                        <td>{{data.Contact_type}}</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Emploment Details" class="mat-tab-label">
+                    <div class="card p-3">
+                        <div class="card">
+                            <div style="margin: 30px;">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <mat-form-field>
+                                            <mat-label>Organization Name</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Address ID</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Moo</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Soi</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Road</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+    
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Sub District</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of sub_districts">
+                                                    {{data.name_th}}</option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>District</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of districts">
+                                                    {{data.name_th}}</option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Province</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of provinces">
+                                                    {{data.name_th}}</option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Postal Code</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of sub_districts">
+                                                    {{data.zip_code}}</option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Country</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of countries">
+                                                    {{data.name}}</option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Name Prefix (Contact Person)</mat-label>
+                                            <input type="text" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>First Name (Contact Person)</mat-label>
+                                            <input type="text" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Last Name (Contact Person)</mat-label>
+                                            <input type="text" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Mobile No.</mat-label>
+                                            <input type="text" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Office Phone No.</mat-label>
+                                            <input type="text" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Employment ID</mat-label>
+                                            <input type="text" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Occupation Class</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of occupation_class">
+                                                    {{data.name}}</option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Occupation of the Person</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of occupation_of_person">
+                                                    {{data.name}}
+                                                </option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field>
+                                            <mat-label>Status</mat-label>
+                                            <select matNativeControl required>
+                                                <option value="">-----Select-----</option>
+                                                <option value="mercedes" *ngFor="let data of status_person">
+                                                    {{data.status}}</option>
+                                            </select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-tab>
+        <mat-tab label="Document & Others"></mat-tab>
+        <mat-tab label="Financial Details"></mat-tab>
+
+
+    </mat-tab-group>
+
+
+</div>
