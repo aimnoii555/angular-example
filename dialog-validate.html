@@ -1,0 +1,21 @@
+<div style="margin: 10px;">
+    <h1 mat-dialog-title style="text-align:center">{{data.header}}</h1>
+    <div mat-dialog-content>
+        <h3 style="text-align: left;">{{data.content}}</h3>
+    </div>
+
+    <div mat-dialog-actions style="text-align: center;">
+        <table style="width: 100%; padding-bottom: 10px; padding-top: 10px;">
+            <tr>
+                <td style="width: 50%; text-align: center;">
+                    <button mat-raised-button (click)="onOkClick()"
+                        style="background-color: #2e278c; color: #ffffff; border-radius: 10%; border-color: #2e278c; padding-top: 5px; padding-bottom: 5px;">Ok</button>
+                </td>
+                <td style="width: 50%; text-align: center;">
+                    <button mat-raised-button (click)="onCancelClick()"
+                        style="background-color: #f1852d; color: #ffffff; border-radius: 10%; border-color: #f1852d; padding-top: 5px; padding-bottom: 5px;">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
