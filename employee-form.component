@@ -1,0 +1,30 @@
+.button:hover {
+   background-color: rgb(227, 225, 216); /* Green */
+   padding: 3px 3px;
+   color: black;
+   opacity: 0 8px;
+   border: none;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.title {
+    background: rgb(46,42,51);
+    background: linear-gradient(90deg, rgba(46,42,51,1) 4%, rgba(209,222,209,1) 100%);
+    padding: 10px; 
+    margin: 0.5px;
+    color: white; border-radius: 4px;
+}
+
+#card{
+    margin: 5px; margin-top: 30px
+}
+
+.mat-tab3 {
+    width: 30%;
+}
+
